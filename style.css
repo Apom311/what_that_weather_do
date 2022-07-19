@@ -1,0 +1,18 @@
+body {
+    background-color: darkturquoise;
+}
+
+header {
+    background-color: blue;
+    color:aliceblue;
+}
+
+form label,
+form h2 {
+    color:white;
+}
+
+.my-btn {
+    background-color: white;
+    color:blue;
+}
