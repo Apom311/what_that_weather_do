@@ -12,101 +12,56 @@
     <header>
         <h1>Your 5 day Weather Forecast</h1>
     </header>
-
+    <!-- main container -->
     <div class="container-fluid">
-        
-    
-
-        <aside class="row">
-            <nav class="navbar navbar-light bg-primary" id="nav">
-                <form>
-                <h2>Search for a City:</h2>
-                    <div class="col-md-6 mb-3">
-                        <label for="validationTooltip03">City</label>
-                        <input type="text" class="form-control form-input user-input" id="validationTooltip03" placeholder= "Enter a City" required>
-                        <div class="invalid-tooltip">Please provide a valid city.</div>
-                    <button class="btn btn-primary my-btn" type="submit">Search</button>
-                </form>
-                <ol class="previous-cities">Choose from previous
-                    <li>last city</li>
-                    <li>other</li>
-                </ol>
-            </nav>
-        </aside>
-
         <div class="row">
-            <div class="row">
-            <div class="col-sm">
-                One of five columns
+            <aside class="col-sm-4">
+                <div class="row" id="">
+                    Search for a City:
+                </div>
+                <div class="row">
+                    <form class="form-inline">
+                        <input class="form-control" type="search" placeholder="Enter City Name:" aria-label="Search" id="searchInput">
+                        <button class="btn btn-outline-primary" type="submit"><i class="fas fa-cloud-sun"></i></button>
+                    </form>
+                    <div class="row" id="searchHistory">
+                        <div class="card" style="width: 18rem;" id="btnList">
+                        <!-- Search History will go here -->
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- All Weather -->
+            <div class="col-lg-8" id="allWeather">
+                <div class="row" id="weatherCard">
+                    <div class="card" style="width: 98%;" id="cardDisplay">
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="card-body" id="card">
+                                    <h2 class="card-title" id="city"></h2>
+                                    <p class="card-text" id="temp"></p>
+                                    <p class="card-text" id="humidity"></p>
+                                    <p class="card-text" id="windSpeed"></p>
+                                    <p class="card-text" id="indexUV"></p>
+                                </div>
+                            </div>
+                            <!--section-->
+                                <!-- main Icon if required -->
+                            <!--section-->
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm">
-                two of five columns
-            </div>
-            <div class="col-sm">
-                three of five columns
-            </div>
-            <div class="col-sm">
-                four of five columns
-            </div>
-            <div class="col-sm">
-                five of five columns
-            </div>
+
+        <!-- forecast -->
+
+            <div class="row" id="forecastRow"></div>
+            <div class="row" id="forecastCards">
+                <!-- Cards imported here -->
             </div>
         </div>
-
-        <!-- Possible table for weather forecast -->
-        <table class="table table-borderless table-dark">
-            <thead>
-            <tr>
-                <th scope="col" colspan="5">5 day Weather Forecast</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Day 1</td>
-                <td>Day 2</td>
-                <td>Day 3</td>
-                <td>Day 4</td>
-                <td>Day 5</td>
-            </tr>
-            <tr>
-                <td>Date: <span></span></td>
-                <td>Date: <span></span></td>
-                <td>Date: <span></span></td>
-                <td>Date: <span></span></td>
-                <td>Date: <span></span></td>
-
-            </tr>
-            <tr>
-                <td>Icon: <span></span></td>
-                <td>Icon: <span></span></td>
-                <td>Icon: <span></span></td>
-                <td>Icon: <span></span></td>
-                <td>Icon: <span></span></td>
-            </tr>
-            <tr>
-                <td>Temperature: <span></span></td>
-                <td>Temperature: <span></span></td>
-                <td>Temperature: <span></span></td>
-                <td>Temperature: <span></span></td>
-                <td>Temperature: <span></span></td>
-            </tr>
-            <tr>
-                <td>Wind Speed: <span></span></td>
-                <td>Wind Speed: <span></span></td>
-                <td>Wind Speed: <span></span></td>
-                <td>Wind Speed: <span></span></td>
-                <td>Wind Speed: <span></span></td>
-            </tr>
-            <tr>
-                <td>Humidity: <span></span></td>
-                <td>Humidity: <span></span></td>
-                <td>Humidity: <span></span></td>
-                <td>Humidity: <span></span></td>
-                <td>Humidity: <span></span></td>
-            </tr>
-            </tbody>
-        </table>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

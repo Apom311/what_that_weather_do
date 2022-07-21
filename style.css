@@ -34,10 +34,20 @@ form .form-input {
   font-size: 1.2rem;
 }
 
+ul,
+li{
+    color:white;
+}
+
 table {
     position:relative;
-    float:right;
-    flex-wrap: wrap;
+    margin:5px;
+    padding:1em;
+
+}
+
+.navbar {
+    margin:1em;
 }
 
 .nav-container {
