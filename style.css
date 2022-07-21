@@ -34,6 +34,12 @@ form .form-input {
   font-size: 1.2rem;
 }
 
+table {
+    position:relative;
+    float:right;
+    flex-wrap: wrap;
+}
+
 .nav-container {
     align-items:center;
     justify-content:center;

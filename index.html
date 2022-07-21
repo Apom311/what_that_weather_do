@@ -12,41 +12,102 @@
     <header>
         <h1>Your 5 day Weather Forecast</h1>
     </header>
-    <div class="container container-fluid nav-container">
-        <nav class="navbar navbar-light bg-primary" id="nav">
-            <form>
-            <h2>Search for a City:</h2>
-                <div class="col-md-6 mb-3">
-                    <label for="validationTooltip03">City</label>
-                    <input type="text" class="form-control form-input user-input" id="validationTooltip03" placeholder= "Enter a City" required>
-                    <div class="invalid-tooltip">Please provide a valid city.</div>
-                <button class="btn btn-primary my-btn" type="submit">Search</button>
-            </form>
-        </nav>
-    </div>
 
-    <table class="table">
-        <div class="card">
-            <div class="card-header">Day1</div>
-            <div class="card-body" id="day-one">Day1 content</div>
+    <div class="container-fluid">
+        
+    
+
+        <aside class="row">
+            <nav class="navbar navbar-light bg-primary" id="nav">
+                <form>
+                <h2>Search for a City:</h2>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationTooltip03">City</label>
+                        <input type="text" class="form-control form-input user-input" id="validationTooltip03" placeholder= "Enter a City" required>
+                        <div class="invalid-tooltip">Please provide a valid city.</div>
+                    <button class="btn btn-primary my-btn" type="submit">Search</button>
+                </form>
+                <ol class="previous-cities">Choose from previous
+                    <li>last city</li>
+                    <li>other</li>
+                </ol>
+            </nav>
+        </aside>
+
+        <div class="row">
+            <div class="row">
+            <div class="col-sm">
+                One of five columns
+            </div>
+            <div class="col-sm">
+                two of five columns
+            </div>
+            <div class="col-sm">
+                three of five columns
+            </div>
+            <div class="col-sm">
+                four of five columns
+            </div>
+            <div class="col-sm">
+                five of five columns
+            </div>
+            </div>
         </div>
-        <div class="card">
-            <div class="card-header">Day2</div>
-            <div class="card-body" id="day-two">Day2 content</div>
-        </div>
-        <div class="card">
-            <div class="card-header">Day3</div>
-            <div class="card-body" id="day-three">Day3 content</div>
-        </div>
-        <div class="card">
-            <div class="card-header">Day4</div>
-            <div class="card-body" id="day-four">Day4 content</div>
-        </div>
-        <div class="card">
-            <div class="card-header">Day5</div>
-            <div class="card-body" id="day-five">Day5 content</div>
-        </div>
-    </table>
+
+        <!-- Possible table for weather forecast -->
+        <table class="table table-borderless table-dark">
+            <thead>
+            <tr>
+                <th scope="col" colspan="5">5 day Weather Forecast</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Day 1</td>
+                <td>Day 2</td>
+                <td>Day 3</td>
+                <td>Day 4</td>
+                <td>Day 5</td>
+            </tr>
+            <tr>
+                <td>Date: <span></span></td>
+                <td>Date: <span></span></td>
+                <td>Date: <span></span></td>
+                <td>Date: <span></span></td>
+                <td>Date: <span></span></td>
+
+            </tr>
+            <tr>
+                <td>Icon: <span></span></td>
+                <td>Icon: <span></span></td>
+                <td>Icon: <span></span></td>
+                <td>Icon: <span></span></td>
+                <td>Icon: <span></span></td>
+            </tr>
+            <tr>
+                <td>Temperature: <span></span></td>
+                <td>Temperature: <span></span></td>
+                <td>Temperature: <span></span></td>
+                <td>Temperature: <span></span></td>
+                <td>Temperature: <span></span></td>
+            </tr>
+            <tr>
+                <td>Wind Speed: <span></span></td>
+                <td>Wind Speed: <span></span></td>
+                <td>Wind Speed: <span></span></td>
+                <td>Wind Speed: <span></span></td>
+                <td>Wind Speed: <span></span></td>
+            </tr>
+            <tr>
+                <td>Humidity: <span></span></td>
+                <td>Humidity: <span></span></td>
+                <td>Humidity: <span></span></td>
+                <td>Humidity: <span></span></td>
+                <td>Humidity: <span></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
