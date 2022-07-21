@@ -13,55 +13,48 @@ body {
 header {
     background-color: blue;
     color:aliceblue;
+    padding: 10px;
+    justify-content: center;
 }
 
-form label,
-form h2 {
-    color:white;
+a {
+    color:white !important;
+    font-size: 30px;
+    text-decoration: none !important;
 }
 
-form label,
-form .form-label {
-  display: inline-block;
-  font-size: 1.2rem;
-  margin: 0.625rem 0 0.25rem 0.3rem;
+#my-row {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
 }
 
-form .form-input {
-  width: 100%;
-  padding: 0.75rem;
-  margin: 0.625rem 0;
-  font-size: 1.2rem;
+.form-inline {
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
-ul,
-li{
-    color:white;
+#searchHistory {
+    padding-left: 35px;
 }
 
-table {
-    position:relative;
-    margin:5px;
-    padding:1em;
-
+#weatherCard {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.navbar {
-    margin:1em;
+#forecastRow {
+    padding-bottom: 20px;
 }
 
-.nav-container {
-    align-items:center;
-    justify-content:center;
-    width:fit-content;
-    float: left;
-}
-.my-btn {
-    background-color: white;
-    color:blue;
+#forecastCards {
+    justify-content: center;
 }
 
-.weather-container .card {
-    float:reverse;
-    float:right;
+#cardDesplay {
+    display: none;
+}
+
+.container-fluid {
+    padding-bottom: 70px;
 }
