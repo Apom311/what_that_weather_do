@@ -23,15 +23,19 @@ a {
     text-decoration: none !important;
 }
 
+.form-inline {
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.container-fluid {
+    padding-bottom: 70px;
+}
+
 #my-row {
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 10px;
-}
-
-.form-inline {
-    padding-left: 20px;
-    padding-bottom: 20px;
 }
 
 #searchHistory {
@@ -53,8 +57,4 @@ a {
 
 #cardDesplay {
     display: none;
-}
-
-.container-fluid {
-    padding-bottom: 70px;
 }
