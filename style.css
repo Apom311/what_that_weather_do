@@ -1,5 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 body {
     background-color: darkturquoise;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 header {
@@ -12,7 +20,32 @@ form h2 {
     color:white;
 }
 
+form label,
+form .form-label {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0.625rem 0 0.25rem 0.3rem;
+}
+
+form .form-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.625rem 0;
+  font-size: 1.2rem;
+}
+
+.nav-container {
+    align-items:center;
+    justify-content:center;
+    width:fit-content;
+    float: left;
+}
 .my-btn {
     background-color: white;
     color:blue;
+}
+
+.weather-container .card {
+    float:reverse;
+    float:right;
 }
