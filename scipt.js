@@ -17,6 +17,7 @@ var url = "https://api.openweathermap.org/data/2.5/weather?q=";
 var citiesArray = JSON.parse(localStorage.getItem("Saved City")) || [];
 var searchInput = $("#searchInput");
 
+//on opening the page, executes all non-reactive functions and pulls the most recent city selected for display
 $(document).ready(function (){
     var userInput = citiesArray[citiesArray.length - 1];
     currentWeather(userInput);
@@ -24,6 +25,7 @@ $(document).ready(function (){
     lastSearch ();
 });
 
+//checks that a correct city is entered into the field and then adds it to local storage as an array along with future entries
 function storeData (userInput) {
     var userInput = searchInput.val().trim().toLowerCase();
     var containsCity = false;
@@ -44,6 +46,7 @@ function storeData (userInput) {
 	localStorage.setItem("Saved City", JSON.stringify(citiesArray)
 );}
 
+//executes all active and re-active functions on submission of the form and checks that a viable submission has been entered
 $(".btn").on("click", function (event){
     event.preventDefault();
     if (searchInput.val() === "") {
@@ -57,6 +60,7 @@ $(".btn").on("click", function (event){
     searchInput.val("");
 });
 
+//the list of all previous searches as well as an event to make them viable user inputs
 function lastSearch () {
     btnList.empty()
     for (var i = 0; i < citiesArray.length; i ++) {
@@ -74,6 +78,7 @@ function lastSearch () {
 
 }
 
+//executes previously defined api search query to pull info about the selected city, as well as pulling info to immediately make a second api search for the UV index based on input. then appends all relevent data to 'todays' weather card
 function currentWeather(userInput) {
     var queryURL = url + userInput + APIKey;
     $.ajax({
@@ -116,11 +121,12 @@ function currentWeather(userInput) {
     })
 }
 
+// used to make the api call for the 5 day forecast, as well as appending them as a set of cards filled with relevent info
 function forecast (userInput) {
     forecastRow.empty();
     forecastCards.empty();
     var fore5 = $("<h2>").attr("class", "forecast").text("--5-Day Forecast: "); 
-    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + userInput + "&units=imperial&APPID=123babda3bc150d180af748af99ad173";
+    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + userInput + APIKey;
     $.ajax({
         url: forecastURL,
         method: "GET"
